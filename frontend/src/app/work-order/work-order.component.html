@@ -1,1 +1,42 @@
-<p>work-order works!</p>
+<h1 xmlns="http://www.w3.org/1999/html">{{titleWorkOrderCustom}} {{nameSourceUser}}</h1>
+<p>LLena la informacion relevante para crear la cotizacion:</p>
+<div>
+  <label>Lugar de creacion de Cotizacion: </label>
+  <input type="text" name="namePlace" id="namePlace" [(ngModel)]='namePlace'>
+</div>
+<div>
+  <label>Fecha de solicitud de Cotizacion: </label>
+  <input type="text" name="nameDateRequest" id="nameDateRequest" [(ngModel)]='nameDateRequest'>
+</div>
+<div>
+  <label>Fecha de creacion de Cotizacion: </label>
+  <input type="text" name="nameDateCreation" id="nameDateCreation" [(ngModel)]='nameDateCreation'>
+</div>
+<div>
+  <label>Nombre a la persona dirigida la Cotizacion: </label>
+  <input type="text" name="nameTargetUser" id="nameTargetUser" [(ngModel)]='nameTargetUser'>
+</div>
+<div>
+  <label>Concepto de la Cotizacion: </label>
+  <input type="text" name="conceptName" id="conceptName" [(ngModel)]='conceptName'>
+</div>
+<div>
+  <label>Valor de la Cotizacion: </label>
+  <input type="text" name="conceptValue" id="conceptValue" [(ngModel)]='conceptValue'>
+</div>
+
+<h2>Resultado previo a cotizacion:</h2>
+<div style="border: 1px black solid" *ngIf="namePlace != ''; then blockPrintOrder"></div>
+<ng-template #blockPrintOrder>
+
+    <h2>{{nameDateCreation}}</h2>
+    <br/>
+    <h2>{{nameTargetUser}}</h2>
+    <h2>{{namePlace}}</h2>
+    <h2>E.S.M.</h2>
+    <br/>
+    <p>En respuesta a su solicitud del  {{nameDateRequest}}, le presentamos la siguiente cotizacion por el concepto de {{conceptName}} con un valor de $ {{conceptValue}}</p>
+
+</ng-template>
+
+<button class="btn btn-danger">Generar</button>

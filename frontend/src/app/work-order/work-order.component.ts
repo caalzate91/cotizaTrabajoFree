@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-work-order',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./work-order.component.css']
 })
 export class WorkOrderComponent {
+
+  titleWorkOrderCustom : String = "Bienvenido a la creacion de orden de servicio"
+  nameSourceUser : String = "Camilo Alzate Inc"
+  namePlace : String = ""
+  nameDateCreation : String = ""
+  nameDateRequest : String = ""
+  nameTargetUser : String = ""
+  conceptName : String = ""
+  conceptValue : String = ""
+
+  ngOnInit(): void {
+  }
 
 }
