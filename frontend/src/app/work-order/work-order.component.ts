@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class WorkOrderComponent {
 
   titleWorkOrderCustom : String = "Bienvenido a la creacion de orden de servicio"
-  nameSourceUser : String = "Camilo Alzate Inc"
+  nameSourceUser : String = ""
   namePlace : String = ""
   nameDateCreation : String = ""
   nameDateRequest : String = ""

@@ -8,6 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { WorkOrderComponent } from './work-order/work-order.component';
 import { BillComponent } from './bill/bill.component';
 import { UserComponent } from './user/user.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { UserComponent } from './user/user.component';
     QuoteComponent,
     WorkOrderComponent,
     BillComponent,
-    UserComponent
+    UserComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
