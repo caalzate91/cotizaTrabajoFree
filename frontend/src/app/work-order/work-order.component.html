@@ -34,15 +34,14 @@
             <input class="form-control" type="text" name="nameSourceUser" id="nameSourceUser" [(ngModel)]='nameSourceUser'>
           </div>
         </div>
-        <button class="btn btn-danger">Generar PDF</button>
       </form>
     </div>
     <div class="container-lg">
-      <div class="mb-3 row">
+      <div class="mb-3 row" >
         <h2>Resultado previo a cotizacion:</h2>
         <div *ngIf="namePlace != ''; then blockPrintOrder" class="col-sm-12"></div>
         <ng-template #blockPrintOrder>
-            <div class="card">
+            <div class="card" id="pdfTable" #pdfTable>
               <div class="card-body">
                 <h5 class="card-title">{{namePlace}}, {{nameDateCreation}}</h5>
                 <br/>
@@ -64,6 +63,8 @@
             </div>
         </ng-template>
       </div>
+
     </div>
+    <button class="btn btn-danger" (click)="exportPDF();">Generar PDF</button>
   </div>
 </main>
