@@ -1,11 +1,11 @@
 import { Component, ElementRef, ViewChild  } from '@angular/core';
-import * as jspdf from "jspdf";
-import jsPDF from "jspdf";
 
-//import * as pdfMake from "pdfmake/build/pdfmake";
-//import * as pdfFonts from "pdfmake/build/vfs_fonts";
-//const htmlToPdfmake = require("html-to-pdfmake");
-//(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
+declare var require: any;
+
+import * as pdfMake from "pdfmake/build/pdfmake";
+import * as pdfFonts from "pdfmake/build/vfs_fonts";
+const htmlToPdfmake = require("html-to-pdfmake");
+(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
 @Component({
   selector: 'app-work-order',
@@ -26,32 +26,16 @@ export class WorkOrderComponent {
   conceptName : String = ""
   conceptValue : String = ""
 
-  /*public exportPDF() {
+  ngAfterViewInit(){
+  }
+
+  public exportPDF() {
     console.log("Hola")
     const pdfTable = this.pdfTable.nativeElement;
     console.log(pdfTable)
     var html = htmlToPdfmake(pdfTable.innerHTML);
     const documentDefinition = { content: html };
     pdfMake.createPdf(documentDefinition).download();
-
-  }*/
-
-  ngAfterViewInit(){
-  }
-
-
-  exportPDF() {
-    console.log("Hola")
-    const container = this.pdfTable.nativeElement;
-
-    let pdf = new jsPDF()
-
-    pdf.html(container, {
-      callback: (pdf) => {
-        pdf.save("sample.pdf")
-      }
-    }
-    )
 
   }
 
