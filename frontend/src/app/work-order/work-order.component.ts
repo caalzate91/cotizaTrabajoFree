@@ -19,10 +19,12 @@ export class WorkOrderComponent {
 
   titleWorkOrderCustom : String = "Bienvenido a la creacion de orden de servicio"
   nameSourceUser : String = ""
+  idSourceUser : String = ""
   namePlace : String = ""
   nameDateCreation : String = ""
   nameDateRequest : String = ""
   nameTargetUser : String = ""
+  idTargetUser : String = ""
   conceptName : String = ""
   conceptValue : String = ""
 
