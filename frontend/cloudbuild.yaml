@@ -2,7 +2,7 @@ steps:
   # build the container image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/totemic-union-396517/github.com/caalzate91/cotizaTrabajoFree-pdn:${SHORT_SHA}', '.']
-  # push the container image to Container Registry
+  # push the container image to Artifact (Antes Container Registry)
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/totemic-union-396517/github.com/caalzate91/cotizaTrabajoFree-pdn:${SHORT_SHA}']
   # deploy container image to Cloud Run
