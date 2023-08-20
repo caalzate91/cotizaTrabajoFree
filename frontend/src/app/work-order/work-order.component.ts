@@ -17,7 +17,7 @@ export class WorkOrderComponent {
   @ViewChild('pdfTable', {static: false}) public pdfTable!: ElementRef;
 
 
-  titleWorkOrderCustom : String = "Bienvenido a la creacion de orden de servicio"
+  titleWorkOrderCustom : String = "Bienvenido a la creacion de cuenta de cobro para orden de servicio"
   nameSourceUser : String = ""
   idSourceUser : String = ""
   namePlace : String = ""
